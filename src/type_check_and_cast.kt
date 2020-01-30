@@ -17,6 +17,15 @@ fun getStringLength2(obj: Any): Int? {
     return obj.length
 }
 
+fun getStringLength3(obj: Any): Int? {
+    // `obj` is automatically cast to `String` on the right-hand side of `&&`
+    // obj is Stringが評価された時点でキャストされるので、後ろの式でlengthが使える
+    if (obj is String && obj.length > 0) {
+        return obj.length
+    }
+
+    return null
+}
 
 fun main() {
     fun printLength(obj: Any) {
