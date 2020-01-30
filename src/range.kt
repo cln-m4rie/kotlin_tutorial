@@ -14,4 +14,17 @@ fun main() {
     if (list.size !in list.indices) {
         println("list size is out of valid list indices range, too")
     }
+
+    for (x in 1..5) {
+        print("$x,")
+    }
+
+    for (x in 1..10 step 2) {
+        print("$x,")
+    }
+    println()
+    // downToでデクリメント
+    for (x in 9 downTo 0 step 3) {
+        print("$x,")
+    }
 }
