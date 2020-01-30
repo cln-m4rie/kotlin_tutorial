@@ -13,7 +13,7 @@ fun getStringLength(obj: Any): Int? {
 fun main() {
     fun printLength(obj: Any) {
         // "?:" なんか三項演算子っぽいやつ。エルビス演算子っていうらしい
-        // getStringLengthの値があればそれを返し、nullであれば右辺の値を返す
+        // getStringLengthの値があればそれを返し、偽であれば右辺の値を返す
         println("'$obj' string length is ${getStringLength(obj) ?: "... err, not a string"} ")
     }
     printLength("Incomprehensibilities")
